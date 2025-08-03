@@ -1,0 +1,5 @@
+flask
+flask-cors
+PyMuPDF
+spacy
+language-tool-python
