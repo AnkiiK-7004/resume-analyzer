@@ -5,7 +5,8 @@ import os
 from resume_analyzer import analyze_resume
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="*")  # not just CORS(app)
+
 
 @app.route("/", methods=["GET"])
 def home():
