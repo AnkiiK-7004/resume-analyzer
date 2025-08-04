@@ -19,10 +19,13 @@ function App() {
     const formData = new FormData();
     formData.append('resume', uploadedFile);
 
-    const res = await fetch('https://resume-analyzer-backend-xbfr.onrender.com/analyze', {
+    console.log("Sending request...");
+    const res = await fetch('https://render.com/docs/web-services#port-binding/analyzer', {
       method: 'POST',
       body: formData,
     });
+    console.log("Received response");
+
     const data = await res.json();
     setResult(data);
   };
